@@ -16,12 +16,12 @@ export const getTokenFromUrl=()=>{
     return window.location.hash
     .substring(1)
     .split('&')
-    .reduce((initial,item)=> {
+    .reduce((initial,item) => {
       //accessToken=mySuperSecretKey
       let parts = item.split('=')
       initial[parts[0]]= decodeURIComponent(parts[1]);
       return initial;
-    },{})
+    },{});
 }
 
 //%20 for ascii of space

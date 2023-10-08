@@ -12,7 +12,7 @@ const [{ user }, dispatch]= useDataLayerValue();
     <div className="header">
       <div className="header_left">
     <SearchIcon />
-    <input placeholder='Search for Artists, Songs' type="text" />
+    <input placeholder='Search for Artists, Songs or Podcasts ' type="text" />
       </div>
       <div className="header_right">
         <Avatar src={user?.images[0]?.url} alt={user?.display_name} />
@@ -20,7 +20,7 @@ const [{ user }, dispatch]= useDataLayerValue();
 
       </div>
     </div>
-  )
+  );
 }
 
-export default Header
+export default Header;
