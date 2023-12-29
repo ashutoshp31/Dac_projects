@@ -36,21 +36,14 @@ function Banner() {
     }}>
       <div className="banner_contents">
         <h1 className="banner_title">
-          Movie Name
+          {/*take either of the title, name, original name whichever it finds first*/}
+          {movie?.title || movie?.name || movie?.original_name}
         </h1>
         <div className="banner_buttons">
           <button className='banner_button'>Play</button>
           <button className='banner_button'>My List</button>
         </div>
-        <h1 className="banner_description">{truncate(`This is a Description
-        This is a Description
-        This is a Description
-        This is a Description
-        This is a Description
-        This is a Description
-        This is a Description
-        This is a DescriptionThis is a Description
-        This is a Description`, 150)}</h1>
+        <h1 className="banner_description">{truncate(movie?.overview, 150)}</h1>
       </div>
 
       <div className="banner--fadeBottom" />
