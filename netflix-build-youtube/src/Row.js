@@ -27,10 +27,12 @@ function Row({ title, fetchUrl, isLargeRow = false }) {
     4-The fetchData() function is then called when the component mounts or when the fetchUrl dependency changes.
      This behavior is controlled by the dependency array ([fetchUrl]).
     5-If the fetchUrl changes, the effect will run again, fetching data with the updated URL.
-    6-If the fetchUrl remains the same across renders, the effect won't run again unless the component unmounts and remounts or there's a change in any other dependency.
+    6-If the fetchUrl remains the same across renders, the effect won't run again unless the component unmounts and 
+    remounts or there's a change in any other dependency.
     7-This code snippet is typically used to fetch data from an API endpoint when the component mounts
      (or when the fetchUrl dependency changes) and updates the component's state (movies) with the fetched data. 
-    The useEffect hook is essential for managing side effects in React components and is commonly used for data fetching, subscriptions, setting up event listeners, and more.*/}
+    The useEffect hook is essential for managing side effects in React components and is commonly used for data fetching, 
+    subscriptions, setting up event listeners, and more.*/}
 
     return (
         <div className='row'>
@@ -39,7 +41,8 @@ function Row({ title, fetchUrl, isLargeRow = false }) {
 2-For each movie in the movies array, it generates an <img> element.
 3-The src attribute of the <img> element is set dynamically using a template
  literal ${base_url}${isLargeRow ? movie.poster_path : movie.backdrop_path}
- 4-This code  generates a list of movie images (<img>) based on the movies array, using different image paths (poster_path or backdrop_path) depending on the value of isLargeRow. 
+ 4-This code  generates a list of movie images (<img>) based on the movies array, using different image paths (poster_path or backdrop_path)
+  depending on the value of isLargeRow. 
  The resulting JSX markup will display a series of movie images in the component.*/}
            <div className="row_posters">
             {movies.map(movie => (
